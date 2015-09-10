@@ -8,7 +8,7 @@ using System.Text;
 namespace customer
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "getCustomerDetail" in code, svc and config file together.
-    public class getCustomerDetail : IgetCustomerDetail
+    public class getCustomerDetail : getCustomerDetail
     {
         public void DoWork()
         {

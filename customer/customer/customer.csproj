@@ -48,6 +48,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\customer.mdf" />
+    <Content Include="App_Data\customer_log.ldf">
+      <DependentUpon>customer.mdf</DependentUpon>
+    </Content>
     <Content Include="getCustomerDetail.svc" />
     <Content Include="Service1.asmx" />
     <Content Include="Web.config" />
@@ -71,9 +75,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>
