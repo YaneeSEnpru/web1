@@ -37,6 +37,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
@@ -46,6 +48,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="getCustomerDetail.svc" />
     <Content Include="Service1.asmx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -56,6 +59,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="getCustomerDetail.svc.cs">
+      <DependentUpon>getCustomerDetail.svc</DependentUpon>
+    </Compile>
+    <Compile Include="IgetCustomerDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Service1.asmx.cs">
       <DependentUpon>Service1.asmx</DependentUpon>
       <SubType>Component</SubType>
