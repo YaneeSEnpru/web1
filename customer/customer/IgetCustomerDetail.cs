@@ -7,6 +7,7 @@ using System.Web.Services;
 using System.Web.Services.Protocols;
 using System.ComponentModel;
 using System.Data.SqlClient;
+using System.Text;
 
 // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line.
 // <System.Web.Script.Services.ScriptService()> _
@@ -28,7 +29,7 @@ public class getCustomerDetail : System.Web.Services.WebService
         string strConnString = null;
         StringBuilder strSQL = new StringBuilder();
 
-        strConnString = "Server=localhost;UID=sa;PASSWORD=;database=mydatabase;Max Pool Size=400;Connect Timeout=600;";
+        strConnString = "Server=.\localhost;UID=moo;PASSWORD=1234;database=mydatabase;Max Pool Size=400;Connect Timeout=600;";
 
         strSQL.Append(" SELECT * FROM customer ");
         strSQL.Append(" WHERE [CustomerID] = '" + strCusID + "' ");
